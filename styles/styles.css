@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --color-bg: #1E1E2F;
+  --color-time: #39FF14;
+  --color-date: #A1A1A1;
+  --color-accent: #FFD700;
+  --font-time: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-time);
+  font-family: var(--font-time);
+}
+
+.clock {
+  text-align: center;
+}
+
+.clock__time {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.clock__date {
+  font-size: 1.2rem;
+  color: var(--color-date);
+  margin-top: 10px;
+}
+
+.clock__format {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clock__format:hover {
+  background-color: var(--color-time);
+  color: var(--color-bg);
+}
+
+.clock__format:active {
+  transform: scale(0.95);
+}
+
+
+@media (max-width: 480px) {
+  .clock__time {
+    font-size: 3rem;
+  }
+}
